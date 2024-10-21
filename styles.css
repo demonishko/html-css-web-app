@@ -337,21 +337,7 @@ footer {
 .continue-button:hover {
     background-color: #555;
 }
-.scroll-up {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 50%;
-    z-index: 1000;
-}
-.scroll-up:hover {
-    background-color: #555;
-}
+
 .image-container {
     position: relative;
     width: 300px;
@@ -412,4 +398,20 @@ footer {
 }
 .search-button:hover {
     background-color: #372e61;
+}
+
+.scroll-up {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+.scroll-up:hover {
+    background-color: #555;
 }

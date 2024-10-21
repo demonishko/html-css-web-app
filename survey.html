@@ -31,6 +31,8 @@
                     <input type="text" class="search-input" placeholder="Search...">
                     <button class="search-button" type="submit">🔍</button>
                 </div>
+
+                <button id="sign-in-btn" class="sign-in-button">Sign in</button>
             </ul>
         </nav>
     </header>
@@ -54,17 +56,164 @@
                 <button type="submit">Відправити</button>
             </form>
         </section>
+
+        <!-- Коментарі користувачів -->
+        <section class="comments">
+            <h3>Коментарі користувачів</h3>
+            <div class="comment">
+                <p><strong>Олена:</strong> Дуже цікаво! Я завжди хотіла дізнатися більше про Таро.</p>
+            </div>
+            <div class="comment">
+                <p><strong>Ігор:</strong> Дякую за можливість висловити свою думку. Таро - це чудово!</p>
+            </div>
+            <div class="comment">
+                <p><strong>Марія:</strong> Мені подобаються різні види розкладів. Сподіваюся на нові матеріали!</p>
+            </div>
+            <div class="comment">
+                <p><strong>Сергій:</strong> Чекаю новин! Таро дуже захоплює!</p>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>Контакти: sokrovolska.nadiia@chnu.edu.ua</p>
         <p>© 2024 Таро та Астрологія. Всі права захищені.</p>
+        <a href="#top" class="scroll-up">↑</a>
     </footer>
-    <a href="#top" class="scroll-up">↑</a>
+
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Вхід</h2>
+            <form>
+                <label for="username">Ім'я користувача</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="submit-btn">Увійти</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const signInBtn = document.getElementById('sign-in-btn');
+        const modal = document.getElementById('auth-modal');
+        const closeBtn = document.querySelector('.close-btn');
+
+        signInBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        document.querySelector('.scroll-up').addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.getElementById('top');
+            target.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
     <style>
-body {
-    background-image: url('images/full_bg4.avif');
-}
+        body {
+            background-image: url('images/full_bg4.avif');
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 400px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: black;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .sign-in-button {
+            padding: 1px 10px;
+            margin-left: 5px;
+            background-color: rgb(147, 137, 198);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sign-in-button:hover {
+            background-color: rgb(69, 58, 120);
+        }
+
+        .comments {
+    margin-bottom: 50px;
+    background-color: rgba(24, 24, 26, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .comment {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-left: 3px solid #4CAF50;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .comment p {
+            margin: 0;
+        }
     </style>
 </body>
 </html>

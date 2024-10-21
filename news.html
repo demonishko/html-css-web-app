@@ -1,54 +1,153 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новини</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <title>Новини</title>
+    <style>
+        body {
+            background-color: #f5f0ff;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .btn-secondary {
+            background-color: #5a329a;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: #5a329a;
+            border: none;
+        }
+
+        .card {
+            background-color: #e9d8f6;
+            text-align: center;
+        }
+
+        .alert {
+            background-color: #d5c4e0;
+            text-align: center;
+        }
+
+        .custom-news {
+            border: 2px solid #6f42c1;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .custom-news h5 {
+            color: #4a0072;
+        }
+
+        .media {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .media img {
+            margin-right: 20px;
+        }
+
+    </style>
 </head>
-<div id="top"></div>
+
 <body>
+    <div id="top"></div>
     <header>
-        <div class="logo">
-            <img src="images/form-logo.png" alt="Логотип">
-            <h1>Таро та Астрологія</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="registration.html">Реєстрація</a></li>
-                <li class="dropdown">
-                    <a href="about.html">Про Таро &#9660;</a>
-                    <ul class="submenu">
-                        <li><a href="#">Таро Історія</a></li>
-                        <li><a href="#">Види розкладів</a></li>
-                    </ul>
-                </li>
-                <li><a href="survey.html">Опитувальник</a></li>
-                <li><a href="news.html">Новини</a></li>
-
-                <div class="search-container">
-                    <input type="text" class="search-input" placeholder="Search...">
-                    <button class="search-button" type="submit">🔍</button>
-                </div>
-            </ul>
-        </nav>
+        <h1>Новини Таро та Астрології</h1>
+        <a href="index.html" class="btn btn-secondary">Повернутися на головну</a>
     </header>
+    <main class="container mt-5">
+        <h2 class="mb-4 text-center">Останні новини</h2>
 
-    <main>
-        <section class="news">
-            <h2>Новини та Статті</h2>
-            <article>
-                <h3>Новини Таро</h3>
-                <p>Останні новини, статті та події у світі Таро...</p>
-            </article>
-        </section>
+        <div class="card mb-4">
+            <img src="images/image1.jpeg" class="card-img-top" alt="Новина 1">
+            <div class="card-body">
+                <h5 class="card-title">Таро: Відкриття нових шляхів</h5>
+                <p class="card-text">Дослідження показують, як карти Таро можуть допомогти вам зрозуміти своє внутрішнє «я».</p>
+                <a href="#" class="btn btn-primary">Читати далі</a>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="images/image2.jpeg" alt="Новина 2" style="width: 150px;">
+            <div class="media-body text-center">
+                <h5 class="mt-0">Астрологія в повсякденному житті</h5>
+                <p>Як астрологія може вплинути на ваші щоденні рішення? Читайте наші поради.</p>
+                <a href="#" class="btn btn-secondary">Читати далі</a>
+            </div>
+        </div>
+
+        <div class="list-group mb-4">
+            <a href="#" class="list-group-item list-group-item-action text-center">
+                <h5 class="mb-1">Новини з світу Таро</h5>
+                <p class="mb-1">Відкриття нових методів інтерпретації карт.</p>
+                <small>Дата: 20 жовтня 2024</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action text-center">
+                <h5 class="mb-1">Астрологічний прогноз на листопад</h5>
+                <p class="mb-1">Які планети вплинуть на ваш знак зодіаку в наступному місяці?</p>
+                <small>Дата: 19 жовтня 2024</small>
+            </a>
+        </div>
+
+        <div class="alert" role="alert">
+            <h4 class="alert-heading">Вплив Меркурія на ваші рішення</h4>
+            <p>Дослідження вказують на важливість планетарних рухів у вашому житті.</p>
+            <hr>
+            <p class="mb-0">Детальніше про цю новину <a href="#" class="alert-link">тут</a>.</p>
+        </div>
+
+        <div class="custom-news">
+            <h5>Найкращі практики для читання Таро</h5>
+            <p>Короткий опис методів, які можуть покращити ваші навички читання карт.</p>
+            <a href="#" class="btn btn-secondary">Читати далі</a>
+        </div>
+
+        <div class="card mb-4">
+            <img src="images/image3.webp" class="card-img-top" alt="Новина 3">
+            <div class="card-body">
+                <h5 class="card-title">Значення кожної карти Таро</h5>
+                <p class="card-text">Відкрийте для себе глибокі значення карт Таро та їх вплив на вашу долю.</p>
+                <a href="#" class="btn btn-primary">Читати далі</a>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="images/image4.jpeg" alt="Новина 4" style="width: 150px;">
+            <div class="media-body text-center">
+                <h5 class="mt-0">Астрологічний календар на 2025 рік</h5>
+                <p>Плануйте свої події відповідно до астрологічних прогнозів.</p>
+                <a href="#" class="btn btn-secondary">Читати далі</a>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <p>Контакти: sokrovolska.nadiia@chnu.edu.ua</p>
-        <p>© 2024 Таро та Астрологія. Всі права захищені.</p>
-    </footer>
     <a href="#top" class="scroll-up">↑</a>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+
+
+        document.querySelector('.scroll-up').addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.getElementById('top');
+            target.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
 </body>
+
 </html>
